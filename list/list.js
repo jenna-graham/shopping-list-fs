@@ -16,8 +16,7 @@ form.addEventListener('submit', async (e) => {
     const listData = new FormData(form);
     const data = await createListItem(listData.get('name'), listData.get('qty'));
     if (data) {
-        window.location.href = '/list';
-    } else {
         error.textContent = 'Something went wrong, try again!';
     }
+    console.log('submit button working');
 });
