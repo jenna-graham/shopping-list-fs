@@ -1,4 +1,4 @@
-import { checkAuth, logout, createListItem getListItems } from '../fetch-utils.js';
+import { checkAuth, logout, createListItem, getListItems, togglePurchased } from '../fetch-utils.js';
 import { renderList } from '../render-utils.js';
 
 checkAuth();
@@ -24,12 +24,21 @@ form.addEventListener('submit', async (e) => {
     }
     console.log('submit button working');
 });
- async function displayItems() {
-     listElem.textContent = '';
-     const data = await getListItems();
-     if (data) {
-         for (let item of data) {
-             const shoppingItem = renderList(item);
-         }
-     }
- }
+async function displayItems() {
+    listElem.textContent = '';
+    const data = await getListItems();
+    if (data) {
+        for (let item of data) {
+            const shoppingItem = renderList(item);
+            shoppingItem.addEventListener('click', async (e) => {
+                e.preventDefault();
+                await togglePurchased(item);
+                displayItems();     
+            });
+            listElem.append(shoppingItem);
+        }
+    } else {
+        error.textContent = 'Something went wrong. Try Again!';
+    }
+}
+displayItems();
