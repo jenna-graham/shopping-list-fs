@@ -1,9 +1,10 @@
-import { checkAuth, logout, createListItem } from '../fetch-utils.js';
+import { checkAuth, logout, createListItem getListItems } from '../fetch-utils.js';
 import { renderList } from '../render-utils.js';
 
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
+const listElem = document.getElementById('shopping-list');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -23,4 +24,12 @@ form.addEventListener('submit', async (e) => {
     }
     console.log('submit button working');
 });
-
+ async function displayItems() {
+     listElem.textContent = '';
+     const data = await getListItems();
+     if (data) {
+         for (let item of data) {
+             const shoppingItem = renderList(item);
+         }
+     }
+ }
