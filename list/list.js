@@ -1,4 +1,5 @@
 import { checkAuth, logout, createListItem } from '../fetch-utils.js';
+import { renderList } from '../render-utils.js';
 
 checkAuth();
 
@@ -15,7 +16,11 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const listData = new FormData(form);
     const data = await createListItem(listData.get('name'), listData.get('qty'));
-    if (data) error.textContent = 'Something went wrong, try again!';
-    
+    if (data) {
+        window.location.href = '/list';
+    } else {
+        error.textContent = 'Something went wrong, try again!';
+    }
     console.log('submit button working');
 });
+

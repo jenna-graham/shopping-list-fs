@@ -45,6 +45,14 @@ export async function createListItem(name, qty) {
     }
     
 }
+export async function getListItems() {
+    const response = await client.from('shopping-items').select('*').order('created_at');
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
 
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
