@@ -1,10 +1,11 @@
-import { checkAuth, logout, createListItem, getListItems, togglePurchased } from '../fetch-utils.js';
+import { checkAuth, logout, createListItem, getListItems, togglePurchased, deleteList } from '../fetch-utils.js';
 import { renderList } from '../render-utils.js';
 
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
 const listElem = document.getElementById('shopping-list');
+const deleteAllBtn = document.getElementById('all-items');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -42,3 +43,9 @@ async function displayItems() {
     }
 }
 displayItems();
+
+
+deleteAllBtn.addEventListener('click', async () => {
+    await deleteList();
+    displayItems();
+});
