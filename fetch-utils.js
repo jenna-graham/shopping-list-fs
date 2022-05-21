@@ -36,8 +36,8 @@ export async function logout() {
 
     return (window.location.href = '../');
 }
-export async function createListItem(name, qty) {
-    const response = await client.from('shopping-items').insert({ name, qty });
+export async function createListItem(name, qty, amount) {
+    const response = await client.from('shopping-items').insert({ name, qty, amount });
     if (response.error) {
         console.error(response.error.message);
     } else {

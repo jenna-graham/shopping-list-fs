@@ -17,7 +17,7 @@ const error = document.getElementById('error');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const listData = new FormData(form);
-    const data = await createListItem(listData.get('name'), listData.get('qty'));
+    const data = await createListItem(listData.get('name'), listData.get('qty'), listData.get('amount'));
     if (data) {
         window.location.href = '/list';
     } else {

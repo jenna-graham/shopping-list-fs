@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Shadows+Into+Light&display=swap');
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     /* --color1: hsla(349, 69%, 76%, 1);
@@ -20,7 +20,20 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../assets/zen-gf8f3f6ccc_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+div {
+    width: 600px;
+    height: 400px;
+    
+}
+
 
 main {
     display: flex;
@@ -28,6 +41,8 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    width: 1000px;
+    height: 600px;  
 }
 
 section {
@@ -47,27 +62,23 @@ section {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
+    height: 100px;
+    margin-top: 150px;
+    
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2em;
     font-weight: bold;
+    text-align: center;
+    margin: 0px;
 }
 
 .gutter-right {
     margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
 }
 
 p {
@@ -115,6 +126,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;   
 }
 
 .auth-container {
@@ -124,8 +136,53 @@ footer {
 .auth-container form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .auth-container button {
     margin: 10px;
+}
+
+/* #sign-in {
+    border: solid 2px;
+    height: 600px;
+    margin-right: 50px;
+}
+#sign-up {
+    border: solid 2px;
+    height: 600px;
+    margin-left: 50px;
+     */
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px;
+    height: 600px;
+    margin: 50px;
+    background-color: rgba(251, 251, 248, 0.809);
+    font-size: 1.5em;
+}
+h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 4em;
+    background-color: rgba(251, 251, 248, 0.529);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+button {
+    height: 30px;
+    width: 100px;
+    border: 3px solid rgb(154, 76, 8);
+    border-radius: 10px;
+    background-color: rgb(210, 207, 196);
+}
+input {
+    border: 2px solid black;
+}
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3em;
 }

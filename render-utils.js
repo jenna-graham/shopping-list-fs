@@ -1,7 +1,7 @@
 export function renderList(item) {
 
     const div = document.createElement('div'); 
-    div.textContent = `${item.qty} ${item.name}`;
+    div.textContent = `${item.name} for ${item.qty} ${item.amount}`;
 
     if (item.purchased) {
         div.classList.add('complete');
