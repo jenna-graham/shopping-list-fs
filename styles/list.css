@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+.complete {
+    text-decoration: line-through;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/buddha-g0d740db1a_1920.jpg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+    border: solid 2px;
+    padding: 30px;
+    background-color: rgba(206, 206, 196, 0.293);
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color3);
+    
+}
+header button {
+    width: 200px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    padding-left: 0px;
+    background-color: rgba(250, 235, 215, 0.779);
+    padding: 20px;
+    border: solid 1px;
+    background-attachment: fixed;
+}
+
+#logout {
+    height: 40px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: solid 4px rgb(176, 111, 25);  
+}
+div {
+    font-family: 'Shadows Into Light', cursive; 
+    font-size: 2em;
+}
+h1 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4em;
+    background-color: antiquewhite;
+    width: 1500px;
+    text-align: center;
+    box-shadow: rgb(245, 212, 150) 0px 0px 0px 6px, rgb(196, 158, 100) 0px 0px 0px 9px, rgb(221, 164, 59) 0px 0px 0px 12px, rgb(172, 98, 45) 0px 0px 0px 15px, rgb(181, 108, 13) 0px 0px 0px 18px;
+}
+section#create {
+    background-color: rgba(250, 235, 215, 0.64);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border: solid 2px;
+    
+}
